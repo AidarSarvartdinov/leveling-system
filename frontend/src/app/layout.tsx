@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Leveling Education System',
-  description: 'Education System with Gamification',
+  title: 'Solo Leveling Education System',
+  description: 'Геймифицированная система обучения',
 }
 
 export default function RootLayout({
@@ -13,7 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ru">
-      <body className="antialiased font-orbitron">
+      <body className="antialiased font-orbitron bg-black">
         {children}
       </body>
     </html>

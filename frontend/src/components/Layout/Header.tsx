@@ -1,11 +1,12 @@
 import Link from 'next/link';
+import { memo } from 'react';
 import type { Player } from '../../types';
 
 interface HeaderProps {
   player: Player | null;
 }
 
-export default function Header({ player }: HeaderProps) {
+function Header({ player }: HeaderProps) {
   return (
     <header className="bg-gray-900 border-b border-cyber-cyan">
       <div className="container mx-auto px-4 py-4">
@@ -13,7 +14,7 @@ export default function Header({ player }: HeaderProps) {
           <div className="flex items-center gap-8">
             <Link href="/" className="group">
               <h1 className="text-2xl font-orbitron text-cyber-cyan group-hover:text-cyan-300 transition-colors text-glow">
-                SYSTEM: <span className="text-cyber-purple">EDUCATION MODE</span>
+                SYSTEM: <span className="text-purple-500">EDUCATION MODE</span>
               </h1>
             </Link>
             
@@ -33,7 +34,7 @@ export default function Header({ player }: HeaderProps) {
           {player && (
             <div className="text-right">
               <div className="text-cyber-cyan font-orbitron">Уровень: {player.level}</div>
-              <div className="text-cyber-green text-sm">EXP: {player.experience}/{player.experienceToNextLevel}</div>
+              <div className="text-green-500 text-sm">EXP: {player.experience}/{player.experienceToNextLevel}</div>
             </div>
           )}
         </div>
@@ -41,3 +42,5 @@ export default function Header({ player }: HeaderProps) {
     </header>
   );
 }
+
+export default memo(Header);
