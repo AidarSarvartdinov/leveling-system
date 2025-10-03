@@ -22,6 +22,9 @@ function Header({ player }: HeaderProps) {
               <Link href="/" className="text-cyber-cyan hover:text-cyan-300 font-orbitron transition-colors">
                 ГЛАВНАЯ
               </Link>
+              <Link href="/courses" className="text-cyber-cyan hover:text-cyan-300 font-orbitron transition-colors">
+                КУРСЫ
+              </Link>
               <Link href="/statistics" className="text-cyber-cyan hover:text-cyan-300 font-orbitron transition-colors">
                 СТАТИСТИКА
               </Link>
